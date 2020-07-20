@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #272730;
+  color: #f1f1f1;
+}
+.avatar {
+  border-radius: 100px;
+  width: 200px;
+  height: 200px;
+}
+
+.MyHeader {
+  background-image: url("../images/bac3.jpeg");
+  display: flex;
+  justify-content: center;
+}
+
+.backgroundHeader {
+  position: relative;
+}
+
+img {
+}
+
+header {
+}
