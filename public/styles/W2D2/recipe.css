@@ -1,0 +1,118 @@
+body {
+  font-family: Georgia, Garamond, Arial, Helvetica, serif;
+  background: #272730;
+  /*background: white;*/
+  color: #f1f1f1;
+  font-size: 11pt;
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.user-com {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2em;
+}
+
+ul {
+  list-style-image: url("../../images/W2D2/pie_icon.gif");
+}
+
+.comments {
+  margin: 1em;
+  padding: 0.5em;
+  background: #ffffa8 /*#ffffa8*/;
+  color: #000;
+  font-style: italic;
+}
+
+.boldd {
+  font-weight: bold;
+}
+
+.directions {
+  margin-bottom: 1em;
+}
+
+#titleP {
+  text-align: center;
+  font-size: 22pt;
+  font-weight: bold;
+}
+.headers {
+  background: #363641;
+  /*background: #f0f0f0;*/
+  /*color: #f7b605;*/
+  color: #a4a400;
+  text-decoration-line: underline;
+  padding: 0.1em;
+  font-family: Lucida Sans Unicode, Arial, Helvetica, sans-serif;
+  font-size: 18pt;
+  font-weight: normal;
+  word-spacing: 0.25em;
+}
+
+hr {
+  border: 1px solid #43414d;
+}
+
+h2 {
+  text-align: center;
+  font-size: 22pt;
+  font-weight: bold;
+}
+
+.links-copy {
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  text-decoration: underline;
+}
+.tooltip:hover {
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #363641;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+a {
+  color: #a4a400;
+}
