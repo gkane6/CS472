@@ -1,0 +1,91 @@
+body {
+  font-size: 8pt;
+  font-family: Verdana, Tahoma, sans-serif;
+  background-image: url("../../images/W1D3/background.png");
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-align: center;
+  font-size: 24pt;
+  font-weight: bold;
+  text-shadow: 3px 3px #999999;
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+.hedd {
+  background-image: url("../../images/W1D3/bannerbg.png");
+}
+.headPercent {
+  background-image: url("../../images/W1D3/rbg.png");
+}
+
+.percnt {
+  font-size: 48pt;
+  color: red;
+  font-weight: bold;
+}
+.sidebar {
+  float: right;
+  width: 30%;
+  background: #a2b964;
+}
+dd {
+  display: flex;
+  flex-wrap: wrap;
+}
+.insidebox {
+  margin: auto;
+  width: 800px;
+  border: 4px solid #999999;
+  border-radius: 2em;
+  -moz-border-radius: 2em;
+  -webkit-border-radius: 2em;
+  overflow: hidden;
+}
+.insideboxContainer {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+.avatar {
+  float: left;
+  margin: 0 0.5em 0 0.1em;
+}
+.reviews {
+  border: 1px solid gray;
+  padding: 1em;
+  border-radius: 1em;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  overflow: hidden;
+  background: #e8dc9b;
+}
+
+.reviewContainer {
+  margin: 0.5em;
+}
+.reviewCol {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+}
+.reviewColContainer {
+  display: flex;
+  margin-bottom: 3em;
+}
+.reviewFeet {
+  background: #a2b964;
+  height: 7em;
+}
+dl {
+  padding: 1em;
+  margin: 0.5em;
+}
+dt {
+  font-weight: bold;
+}
+
+.validators {
+  float: right;
+}
