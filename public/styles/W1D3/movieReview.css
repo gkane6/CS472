@@ -76,7 +76,9 @@ dd {
 }
 .reviewFeet {
   background: #a2b964;
-  height: 7em;
+  text-align: center;
+  height: 2em;
+  padding: 3em;
 }
 dl {
   padding: 1em;
