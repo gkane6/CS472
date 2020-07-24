@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link rel="stylesheet" href="../public/styles/W1D5/testingFct.css" />
+    <script type="text/javascript" src="HelperFunctions.js"></script>
+  </head>
+  <body>
+    <div class="gridContainer">
+      <div class="gridItem col1">
+        <form>
+          <fieldset>
+            <legend>Max of Two num</legend>
+            <div class="row">
+              <label>First Number: </label>
+              <input type="number" id="maxNum1" name="maxNum1" />
+            </div>
+            <div>
+              <label>Second Number: </label>
+              <input type="number" id="maxNum2" name="lname" />
+            </div>
+            <div>
+              <button onclick="getMax();" type="button" name="button">
+                Max
+              </button>
+              <span id="max2R"></span>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="gridItem col2">
+        <form>
+          <fieldset>
+            <legend>Max of Three numbers</legend>
+            <div class="row">
+              <label>First Number: </label>
+              <input type="number" id="mt1" name="mt1" />
+            </div>
+            <div>
+              <label>Second Number: </label>
+              <input type="number" id="mt2" name="mt2" />
+            </div>
+            <div>
+              <label>Third Number: </label>
+              <input type="number" id="mt3" name="mt3" />
+            </div>
+            <div>
+              <button onclick="getMaxThree(event);">Max of Three</button>
+              <span id="mtrR"></span>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="gridItem col3">
+        <form>
+          <fieldset>
+            <legend>Is Vowel?</legend>
+            <div class="row">
+              <label>String inputs: </label>
+              <input type="text" id="strV" name="strV" />
+            </div>
+            <div>
+              <button onclick="isStrVowel();" type="button" name="button">
+                ??
+              </button>
+              <span id="vow"></span>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="gridItem col4">
+        <form>
+          <fieldset>
+            <legend>Reverse String</legend>
+            <div class="row">
+              <label>String input: </label>
+              <input type="text" id="rvrs" name="strReverse" />
+            </div>
+            <div>
+              <button onclick="isReverse()" type="button" name="button">
+                Reverse
+              </button>
+              <span id="rvrsR"></span>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="gridItem col5">
+        <form>
+          <fieldset>
+            <legend>Sum array Element</legend>
+            <span>Put array Elements seperated by coma</span>
+            <div class="row">
+              <label>Numbers: </label>
+              <input type="text" id="sumAr" name="arrSum" />
+            </div>
+            <div>
+              <button onclick="getSum()" type="button" name="button">
+                SUM
+              </button>
+              <span id="sumR">Result: </span>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="gridItem col6">
+        <form>
+          <fieldset>
+            <legend>Multiply array Element</legend>
+            <span>Put array Elements seperated by coma</span>
+            <div class="row">
+              <label>Numbers: </label>
+              <input type="text" id="arrMult" name="arrMult" />
+            </div>
+            <div>
+              <button onclick="getMulti(event);">X</button>
+              <span id="multiR"></span>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="gridItem col7">
+        <form>
+          <fieldset>
+            <legend>Find longest Length of array elements</legend>
+            <span>Put array Elements seperated by coma</span>
+            <div class="row">
+              <label>Strings: </label>
+              <input type="text" id="longLenIn" name="longLenIn" />
+            </div>
+            <div>
+              <button onclick="getLongLen()" type="button" name="button">
+                Get Long Len
+              </button>
+              <span id="longLenR"></span>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="gridItem col8">
+        <form>
+          <fieldset>
+            <legend>Find specific array elem</legend>
+            <span>Put array Elements seperated by coma</span>
+            <div class="row">
+              <label>Strings: </label>
+              <input type="text" id="longLenArrs" name="longLenArr" />
+            </div>
+            <div class="row">
+              <label>Length: </label>
+              <input type="number" id="LenIn" name="longIn" />
+            </div>
+            <div>
+              <button onclick="getLongWrds()" type="button" name="button">
+                GetWords
+              </button>
+              <span id="longLenArrsR"></span>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

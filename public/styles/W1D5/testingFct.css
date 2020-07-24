@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #272730;
+  color: #9f9fa8;
+}
+
+input {
+  padding: 0.5em;
+  margin: 0.5em 1.5em;
+  border-radius: 0.5em;
+  border: 1px solid black;
+  background: #363641;
+  color: white;
+}
+button {
+  background: #09966a;
+}
+.gridContainer {
+  display: grid;
+  grid-template-areas:
+    "column1 column2"
+    "column3  column4"
+    "column5 column6"
+    "column7 column8";
+}
+
+.gridItem {
+  min-height: 170px;
+  margin: 0.5em;
+}
+.col1 {
+  grid-area: column1;
+}
+fieldset {
+  min-height: 170px;
+  border: 1px solid #43414d;
+}
+
+fieldset {
+  border: 1px solid gray;
+}
+legend {
+  font-weight: bold;
+}
+input[type="text"] {
+  font-family: monospace;
+}
+select {
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+label {
+  margin-right: 0.5em;
+  font-weight: bold;
+}
