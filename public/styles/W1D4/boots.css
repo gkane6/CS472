@@ -1,0 +1,67 @@
+.customNav {
+  color: white;
+  display: flex;
+}
+header {
+  background: rgb(116, 185, 206);
+  padding: 0.5em;
+  text-align: center;
+}
+a {
+  color: white;
+}
+.columnCont {
+  display: flex;
+  margin: 0;
+  background: rgb(35 88 76);
+}
+
+footer {
+  background: rgb(35 88 76);
+  height: 40px;
+  color: white;
+  padding: 1em;
+}
+.rowContainer {
+}
+
+.customCol6 {
+  height: 300px;
+  background: #c1c1c1;
+}
+.customCol32 {
+  height: 300px;
+  background: #777;
+}
+.customCol3 {
+  height: 300px;
+  background: rgb(109, 108, 108);
+}
+
+@media only screen and (min-width: 600px) {
+  .col-sm-3 {
+    float: left;
+    width: 30%;
+  }
+  .col-sm-6 {
+    width: 40%;
+    float: left;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .col-sm-3 {
+  }
+  .customCol6 {
+    float: left;
+    width: 50%;
+  }
+  .customCol32 {
+    float: left;
+    width: 100%;
+  }
+  .customCol3 {
+    float: left;
+    width: 50%;
+  }
+}
