@@ -71,6 +71,22 @@ const filterLongWords = (arr,len) =>{
   return returnArr
 }
 
+const shortest = (str1,str2,str3)=> {
+  const len1 = str1.length
+  const len2 = str2.length
+  const len3 = str3.length
+  if(len1 < len2){
+    if(len1<len3){
+      return str1
+    }return str3
+  }else if(len2<len3){
+      return str2
+    }return str3
+
+
+}
+console.log(shortest("ruu", "za", "j"))
+
 /*==========================CALLING DOM ELEMENTS===============================================*/
 
 const getMax = () =>{
