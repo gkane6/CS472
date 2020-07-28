@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../public/styles/W2D1/regularEx.css" />
+  </head>
+  <body>
+    <div>
+      <form>
+        <div>
+          <label>Email Address</label>
+          <br />
+          <input
+            pattern=".*\w.@.*\w\..*\w{2,3}"
+            id="email"
+            placeholder="Enter email"
+            type="email"
+          />
+        </div>
+        <div>
+          <label>Password </label>
+          <br />
+          <input
+            pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,})"
+            id="passwrd"
+            placeholder="Password"
+            type="password"
+            title="Please enter a correct Password. \nPassword should at least contain 10 character one number, one UpperCase "
+          />
+        </div>
+        <div>
+          <label>Url </label>
+          <br />
+          <input pattern="^http:\/\/|https:\/\/.+" id="url" placeholder="URL" />
+        </div>
+        <div>
+          <input id="checkMe" type="checkbox" />
+          <label>Check me Out </label>
+        </div>
+        <div>
+          <button type="submit" id="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

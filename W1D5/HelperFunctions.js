@@ -82,8 +82,6 @@ const shortest = (str1,str2,str3)=> {
   }else if(len2<len3){
       return str2
     }return str3
-
-
 }
 console.log(shortest("ruu", "za", "j"))
 
@@ -154,3 +152,5 @@ const getLongWrds = () =>{
   document.getElementById("longLenArrsR").innerHTML = val
 
 }
+const x = 100/"tst"
+console.log(x);

@@ -37,10 +37,10 @@ window.onload = () => {
         .getPropertyValue("font-size");
       var fontSize = parseInt(style);
       console.log(style);
-
+      console.log(fontSize);
       const newFont = fontSize + 2;
       // now you have a proper float for the font size (yes, it can be a float, not just an integer)
-      textAre.style.fontSize = `${newFont}pt`;
+      textAre.style.fontSize = `${newFont}px`;
     }, 500);
   };
 
