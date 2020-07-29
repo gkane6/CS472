@@ -42,6 +42,19 @@
           }
         }
       };
+      const longestNoSpace = (...str) => {
+        let longest = 0;
+        console.log(str);
+        console.log(...str);
+        str.filter((elm) => {
+          if (!elm.includes(" ")) {
+            if (longest < elm.length) {
+              longest = elm.length;
+            }
+          }
+        });
+        return longest;
+      };
     </script>
     <script>
       describe("earliestSpace", function () {
@@ -54,6 +67,24 @@
               "bla bla bla"
             )
           );
+        });
+      });
+
+      describe("longestNoSpace", function () {
+        it("returns 0 if given zero parameters", () => {
+          assert.equal(longestNoSpace(), 0);
+        });
+        it("returns 0 if given a single string that contains a space", () => {
+          assert.equal(longestNoSpace("a test"), 0);
+        });
+        it("returns 0 if given only strings that contains spaces", () => {
+          assert.equal(longestNoSpace("this is", "a test"), 0);
+        });
+        it("returns the length of the string if given a single string without a space", () => {
+          assert.equal(longestNoSpace("hello"), 5);
+        });
+        it("returns the length of the longest string if given multiple strings without spaces", () => {
+          assert.equal(longestNoSpace("hhhhello", "world!"), 8);
         });
       });
     </script>

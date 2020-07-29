@@ -1,0 +1,105 @@
+
+1.
+  undefined
+  8
+  8
+  9
+  10
+  1
+2.
+  -Global scope: A variable has a global scope when it can be accessed by all function.
+  -Local scope:A variable has a local scope when it only can be accessed within the function it was declared in.
+3.
+  a. No scope A doesn't have access to variable define in scope A and B
+  b.Yes, scope B have acces to variable define in A
+  c.No , scope B  doesn't have access to variable define in scope C
+  d.Yes , scope C have access to variable in A
+  e.Yes , scope C have access to variable in B
+4.
+  81
+  25
+5.
+  10
+6.
+  const counter = {
+    count : 0,
+    add: function(){
+     this.count++;
+    },
+    reset:function(){
+      this.count = 0;
+    }
+  }
+7.
+  -For functions add() and reset() the free variable is count.
+  -A free variable is a variable used  by a function and the variable itself is neither locally declared nor passed in its arguments
+8.
+  const counter = {
+    "count" : 0,
+    add: function(){
+     this.count++;
+    },
+    reset:function(){
+      this.count = 0;
+    },
+    makeAdder: function(inc){
+      return ()=>{
+        this.count +=inc
+      }
+    }
+  }
+
+9.
+  The simplest wait is to use the IIFE method. (function(){/*File content*/})()
+10.
+  const testObj=(function(){
+    var name="",age=0,salary=0;
+
+    //Public func
+    function setAge(ag){
+      this.age = ag;
+    }
+    function setName(nam){
+      this.name = nam
+    }
+    function setSalary(sal){
+      this.salary = sal
+    }
+    function increaseSalary(sal){
+      this.salary += getSalary()
+    }
+    function increaseAge(ag){
+      this.age +=getAge()
+    }
+
+    //Private
+    function getAge(){
+      return age
+    }
+    function getName(){
+      return name
+    }
+    function getSalary(){
+      return salary
+    }
+
+    //returns
+    return {
+      setAge,
+      setName,
+      setSalary,
+      increaseAge,
+      increaseSalary
+    }
+
+  })()
+
+11.
+  testObj.address = ""
+
+  testObj.setAddress = function(add){
+    this.address = add;
+  }
+  testObj.getAddress = function(){
+    return this.address;
+  }

@@ -152,5 +152,172 @@ const getLongWrds = () =>{
   document.getElementById("longLenArrsR").innerHTML = val
 
 }
-const x = 100/"tst"
-console.log(x);
+
+function f() {
+var a = 1, b = 20, c;
+console.log("frst in f "+a + " " + b + " " + c);//1  20 undefined
+  function g() {
+    var b = 300, c = 4000;
+    console.log("frst in g "+a + " " + b + " " + c);//1 300 4000
+    a = a + b + c;//4301
+    console.log("scd in g "+a + " " + b + " " + c);//4301 300 4000
+  }
+  console.log("scd in f "+a + " " + b + " " + c); //1 20 undefined
+  g();
+  console.log("trd in f "+a + " " + b + " " + c);//4301 20 undefined
+}
+//f();
+//
+//var x = 10;
+function main() {
+  console.log("x1 is:" + x); //x1 is: 10
+  x = 20;
+  console.log("x2 is:" + x);//x2 is: 20
+  if (x > 0) {
+    var x = 30;
+    console.log("x3 is:" + x);//x3 is: 30
+  }
+  console.log("x4 is:" + x);//x4 is: 20
+  var x = 40;//40
+  var f = function(x) {
+    console.log("x5 is:" + x);//x5 is: 50
+  };
+  f(50);
+  console.log("x6 is:" + x);//x6 is: 40
+}
+//main();
+//console.log("x7 is:" + x);//x7 is: 20
+
+
+const x = 1;
+function f() {
+    let y = 2;
+    const sum = function() {
+        const z = 3;
+        console.log(x + y + z);//1+10+3
+    }
+    y = 10;
+    return sum;
+} //end of f
+  const g = f();
+//  g();
+
+  var funcs = [];
+  for (var i = 0; i < 5; i++) {
+    console.log(`func[${i}] before funcExp ${i}`)
+  funcs[i] = function() {
+    console.log(`func[${i}] in funcExp ${i}`)
+     return i;
+  }; }
+  console.log(funcs[0]());
+  console.log(funcs[1]());
+  console.log(funcs[2]());
+  console.log(funcs[3]());
+  console.log(funcs[4]());
+
+
+  /* return a function with no parameters that has an ‘embedded parameter’ */
+  var helper = function(n) {
+    return function() {
+      console.log(`func[${n}] in funcExp ${n}`)
+      return n;
+    }
+  }
+  var funcs = [];
+  for (var i = 0; i < 5; i++) {
+  funcs[i] = helper(i);
+};
+  console.log(funcs[0]());
+  console.log(funcs[1]());
+  console.log(funcs[2]());
+  console.log(funcs[3]());
+  console.log(funcs[4]());
+
+  //ES6 solution: let vs var const funcs = [];
+  for (let i = 0; i < 5; i++) {
+  funcs[i] = function() { return i;
+  }; }
+  console.log(funcs[0]()); console.log(funcs[1]()); console.log(funcs[2]()); console.log(funcs[3]()); console.log(funcs[4]());
+
+
+console.log();
+
+(function(){var x = 1;
+var a = 5;
+var b = 10;
+var c = (a, b, c) => {
+  console.log(x); //undefind
+  console.log(a); //8
+  var f = (a, b, c) => {
+    b = a; //
+    console.log(b); //8
+    b = c; //10
+    var x = 5;
+  };
+  f(a, b, c);
+  console.log(b); //9
+  var x = 10;
+};
+c(8, 9, 10);
+console.log(b); //10
+console.log(x); //1
+
+//ScopeA
+function XFunc() {
+  //Scope B
+  function YFunc() {
+    //Scope c
+  }
+}
+
+var tim = 9
+function myFunc(){
+  return tim*tim
+}
+console.log(myFunc());
+tim = 5
+console.log(myFunc());
+
+var fooA =1
+function aFunc(){
+  if(!foo){
+    console.log(!foo);
+    var foo=10
+  }
+  console.log("the alert ",foo);
+}
+aFunc();
+
+const counter = {
+  "count" : 0,
+  add: function(){
+   this.count++;
+  },
+  reset:function(){
+    this.count = 0;
+  },
+  makeAdder: function(inc){
+    return ()=>{
+      this.count +=inc
+    }
+  }
+}
+
+counter.add();
+counter.add();
+console.log(counter.count);
+counter.reset();
+counter.add();
+counter.add();
+console.log(counter.count);
+const add3 = counter.makeAdder(3)
+add3()
+console.log(counter.count);
+
+
+console.log("==============================");
+
+for(let name in global){
+  console.log(name);
+}
+})()
