@@ -1,4 +1,4 @@
-/*it("Filter Banned words", () => {
+it("Filter Banned words", () => {
   assert.equal(
     "This house is nice!",
     "This house is not nice!".filterBannedWrd())
@@ -8,7 +8,7 @@ it("Bubble sort with Map", () => {
   const test =[6,4,0, 3,-2,1]
   assert.equal(pr.join(','), test.bubbleSort().join(','));
 });
-*/
+
 
 var x = 5;
 var y = 7;
