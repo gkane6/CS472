@@ -74,3 +74,29 @@ var prof = new Teacher();
 prof.initialize("Prof", 30);
 console.log(prof.teach("wap"));
 console.log(prof);
+//===========================
+function Animal(sp){
+  this.specie = sp
+}
+Animal.prototype.makeNoise = function(){
+  return `the ${this.specie} make a noise`
+}
+function Pet(name,sp){
+  this.name = name
+  this.specie = sp
+}
+Pet.prototype.play = function(){
+  return `${this.name} the ${this.specie}  make a noise`
+}
+
+Pet.prototype.__proto__ = new Animal()
+
+const minou = new Pet("Minou", "Cat")
+console.log(minou);
+console.log(minou.play());
+console.log(minou.makeNoise());
+Animal.prototype.testMeth=function(){
+  return "Testing adding Method ";
+}
+
+console.log(minou.testMeth());

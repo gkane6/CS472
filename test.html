@@ -55,6 +55,36 @@
         });
         return longest;
       };
+      const validator = (function(fname,lname){
+        let fname1 =document.getElementById("first").value
+        let lname2 =document.getElementById("last").value
+        console.log("calling validd "+fname1+  " "+lname2);
+        function validateF(){
+          return fname.length >0
+        }
+        function validateL(){
+          return lname.length >0
+        }
+        function validate(){
+          //e.preventDefault()
+          return validateF() && validateL()
+        }
+
+        return{
+          validate
+        }
+
+      })()
+
+      window.onload = function(){
+        let fname =document.getElementById("first").value
+        let lname =document.getElementById("last").value
+        console.log(fname,lname);
+        document.getElementById("myForm").onsubmit = ()=>validator.validate(fname,lname)
+
+        //console.log("My validator  "+validator.validate());
+      }
+
     </script>
     <script>
       describe("earliestSpace", function () {
@@ -92,6 +122,11 @@
 
   <body>
     <div id="mocha"></div>
+    <form id="myForm" method="POST">
+            <input type="text" name="first" id="first" placeholder="First Name" /> <br />
+            <input type="text" name="last" id="last" placeholder="Last Name" /> <br />
+            <input type="submit" />
+        </form>
     <script>
       mocha.run();
     </script>
