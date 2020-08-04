@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Circle Popper</title>
+    <link rel="stylesheet" href="../public/styles/W3D2/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./circlesPopper.js"></script>
+  </head>
+  <body>
+    <form class="widgets">
+      <div class="row">
+        <label>width: </label><br />
+        <input type="number" id="startW" />
+      </div>
+      <div class="row">
+        <label>Growing width: </label><br />
+        <input type="number" id="GWidth" />
+      </div>
+      <div class="row">
+        <label>Growing Rate: </label><br />
+        <input type="number" id="rate" />
+      </div>
+      <div class="row">
+        <label>Number of circles: </label><br />
+        <input type="number" id="numbCircle" />
+      </div>
+      <br />
+      <div>
+        <button type="button" id="start">
+          Start
+        </button>
+      </div>
+    </form>
+    <div id="circlesContainer">
+    </div>
+  </body>
+</html>

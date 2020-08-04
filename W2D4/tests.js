@@ -1,4 +1,4 @@
-it("Filter Banned words", () => {
+/*it("Filter Banned words", () => {
   assert.equal(
     "This house is nice!",
     "This house is not nice!".filterBannedWrd())
@@ -110,7 +110,7 @@ const CAR= (function() {
     }
   }
 
-  function break(){
+  function bbreak(){
     if((speed -10) >= 0){
       speed -= 10
     }else{
@@ -128,7 +128,7 @@ const CAR= (function() {
   }
   return{
     gasPaddle,
-    break,
+    bbreak,
     turnLeft,
     turnRight,
     status
@@ -136,7 +136,7 @@ const CAR= (function() {
 })()
 
 CAR.gasPaddle()
-CAR.break()
+CAR.bbreak()
 CAR.turnLeft(50)
 CAR.turnRight(100)
 CAR.status()
@@ -176,3 +176,30 @@ const MyLaptop = new Laptop("4mm","4GB","cpuI","1T")
 
 MyLaptop.runProgram("testingProgram")
 MyLaptop.carryAround()*/
+
+class Computer {
+  constructor(ram,cpu,storage) {
+    this.ram= ram
+    this.cpu = cpu
+    this.storage= storage
+  }
+  runProgram(program){
+    console.log("running: " + program);
+  }
+}
+
+class Laptop extends Computer {
+  constructor(battery,ram,cpu,storage) {
+    super(ram,cpu,storage)
+    this.battery = battery
+  }
+  carryAround() {
+      console.log("carrying laptop:  cpu " + this.cpu +" ram: " + this.ram + " storage: " + this.storage + " battery: " + this.battery);
+  }
+}
+
+const MyLaptop = new Laptop("4mm","4GB","cpuI","1T")
+MyLaptop.runProgram("testingProgram")
+MyLaptop.carryAround()
+MyLaptop.stuff = "testinng"
+console.log(MyLaptop.stuff);

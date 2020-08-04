@@ -1,0 +1,14 @@
+.row {
+}
+.circle {
+  position: absolute;
+}
+
+.widgets{
+  position: absolute;
+}
+
+#circlesContainer{
+  position: absolute;
+  z-index: -1
+}
