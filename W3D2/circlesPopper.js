@@ -39,6 +39,8 @@ $(function (params) {
 });
     },rate)
 
+    //$(".widgets").append($('<input/>',{"type":"text",value:"hello world", name:"hello"}));
+
 
     console.log(widthC, wGrth, rate, numC);
   });
