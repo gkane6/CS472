@@ -33,7 +33,7 @@ $(function (params) {
       "width": `+=${wGrth}px`,
       "border-radius":`+=${wGrth/2}px`})
       $(".circle").hover(function(){
-  $(this).css({"opacity": `-=${0.1}`});
+  $(this).css({"opacity": `-=${0.01}`});
   }, function(){
   $(this).css({"opacity":"1"});
 });
