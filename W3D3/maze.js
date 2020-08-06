@@ -42,7 +42,6 @@ const reset=(function(){
         $("#status").text("You Loose! :-[");
      }})
 
-
       $("#end").mouseenter(function(){
           $("#status").text("You Win! :-]");
           reset.resetBoundary()
