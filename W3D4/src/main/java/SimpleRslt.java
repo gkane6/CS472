@@ -39,7 +39,7 @@ public class SimpleRslt extends HttpServlet {
                 plusLine = "<p>"+lplus+" + "+rplus+ " = "+rsltplus+"</p>";
               }
               if(!lmult.equals("") && !rmult.equals("")){
-                int  rsltmult = Integer.parseInt(lmult)+ Integer.parseInt(rmult) ;
+                int  rsltmult = Integer.parseInt(lmult)* Integer.parseInt(rmult) ;
                 mLine = "<p>"+lmult+" * "+rmult+ " = "+rsltmult+"</p>";
               }
 
