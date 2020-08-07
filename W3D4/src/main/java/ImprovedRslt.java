@@ -19,29 +19,39 @@ public class ImprovedRslt extends HttpServlet{
             throws ServletException, IOException {
               System.out.println("In Post Improved");
               PrintWriter out = response.getWriter();
+
+              String lplus=request.getParameter("lplus");
+              String rplus=request.getParameter("rplus");
+              String lmult=request.getParameter("lmult");
+              String rmult=request.getParameter("rmult");
+
+              String plusLine="<input type=\"number\" name=\"rplus\" /><span>+</span><input type=\"number\" name=\"lplus\" /><span>=</span><input type=\"number\" name=\"rslplus\" />";
+
+              String mLine = "<input type=\"number\" name=\"rmult\" /><span>*</span><input type=\"number\" name=\"lmult\" /><span>=</span><input type=\"number\" name=\"rslmult\" />";
+
+              if(!lplus.equals("") && !rplus.equals("")){
+                int  rsltplus = Integer.parseInt(lplus) + Integer.parseInt(rplus);
+                plusLine = String.format("<input value='%d' type=\"number\" name=\"rplus\" /><span>+</span><input value=%d type=\"number\" name=\"lplus\" /><span>=</span><input value='%d' type=\"number\" name=\"rslplus\" />",Integer.parseInt(lplus),Integer.parseInt(rplus),rsltplus);
+              }
+              if(!lmult.equals("") && !rmult.equals("")){
+                int  rsltmult = Integer.parseInt(lmult)* Integer.parseInt(rmult) ;
+                mLine = String.format("<input type=\"number\" value='%d' name=\"rmult\" /><span>*</span><input value='%d' type=\"number\" name=\"lmult\" /><span>=</span><input type=\"number\" value='%d' name=\"rslmult\" />",Integer.parseInt(lmult),Integer.parseInt(rmult),rsltmult);
+              }
+
               out.print("<html>");
               out.print("<body>");
                 out.print("<h2>Improved Calculator</h2>");
-                out.print("<form method='post' url='/simplerslt' action='improvedrslt'>");
+                out.print("<form>");
                   out.print("<div>");
-                    out.print("<input type=\"number\" name=\"rplus\" />");
-                    out.print("<span>+</span>");
-                    out.print("<input type=\"number\" name=\"lplus\" />");
-                    out.print("<span>=</span><input type=\"number\" name=\"rslplus\" />");
+                    out.print(plusLine);
                   out.print("</div>");
                   out.print("<div>");
-                    out.print("<input type=\"number\" name=\"rmult\" />");
-                    out.print("<span>*</span>");
-                    out.print("<input type=\"number\" name=\"lmult\" />");
-                    out.print("<span>=</span>");
-                    out.print("<input type=\"number\" name=\"rslmult\" />");
+                    out.print(mLine);
                   out.print("</div>");
                   out.print("<button type=\"submit\"  >Submit</button>");
                 out.print("</form>");
               out.print("</body>");
             out.print("</html>");
-
-
             }
 
 

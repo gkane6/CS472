@@ -16,7 +16,7 @@ public class ImprovedCal extends HttpServlet{
     out.print("<html>");
       out.print("<body>");
         out.print("<h2>Improved Calculator</h2>");
-        out.print("<form method='post' url='/simplerslt' action='improvedrslt'>");
+        out.print("<form method='post' action='improvedrslt'>");
           out.print("<div>");
             out.print("<input type=\"number\" name=\"rplus\" />");
             out.print("<span>+</span>");
