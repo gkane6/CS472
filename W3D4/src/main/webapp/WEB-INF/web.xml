@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0"
+  xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+   http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+
+
+  <servlet>
+    <servlet-name>SimpleCal</servlet-name>
+    <servlet-class>SimpleCal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SimpleCal</servlet-name>
+    <url-pattern>/simple</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SimpleRslt</servlet-name>
+    <servlet-class>SimpleRslt</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SimpleRslt</servlet-name>
+    <url-pattern>/simplerslt</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ImprovedCal</servlet-name>
+    <servlet-class>ImprovedCal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ImprovedCal</servlet-name>
+    <url-pattern>/improved</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ImprovedRslt</servlet-name>
+    <servlet-class>ImprovedRslt</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ImprovedRslt</servlet-name>
+    <url-pattern>/improvedrslt</url-pattern>
+  </servlet-mapping>
+
+
+
+
+</web-app>
