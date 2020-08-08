@@ -48,7 +48,7 @@ out.print("<head >");
 out.print("<title>NumberQuiz is over</title> ");
 out.print("</head> ");
 out.print("<body> ");
-out.print("<p style='color:red'>The number quiz is over!</p>	</body> ");
+out.print("<p style='color:red'>The number quiz is over!</p> <form method='post'><input type='submit' name='btnStart' value='Start Again!' /></form>	</body> ");
   out.print("</html> ");
 }
 
