@@ -6,13 +6,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.*;
+import javax.servlet.http.*;
 
 @WebServlet(urlPatterns="/guess",loadOnStartup = 1)
 public class GuessServlet extends HttpServlet{
 
   String[] seq={"3, 1, 4, 1, 5,","1, 1, 2, 3, 5,","1, 4, 9, 16, 25,","2, 3, 5, 7, 11,","1, 2, 4, 8, 16,"};
 
-  Quiz myQuizzSession = new Quiz();
 
 //students - You can use this if you want.  It might save you a little typing for the servlet.
 
@@ -57,33 +58,38 @@ out.print("<p style='color:red'>The number quiz is over!</p> <form method='post'
   throws ServletException, IOException {
     System.out.println("In Get guess");
     PrintWriter out = response.getWriter();
-    genQuizPage(myQuizzSession,out,seq[0],false,"9");
 
+    Quiz mySession = new Quiz();
+    HttpSession session=request.getSession();
+    session.setAttribute("myQuizzState",mySession);
+    genQuizPage(mySession,out,seq[0],false,"9");
   }
 
   protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
               System.out.println("In Post Guess");
+              HttpSession session=req.getSession(false);
+              Quiz mySess = (Quiz)session.getAttribute("myQuizzState");
+
+              System.out.println("==========");
+              System.out.println(mySess.index);
+              System.out.println("==========");
+
               String guessed = req.getParameter("txtAnswer");
               String rstart = req.getParameter("btnStart");
               String nxt = req.getParameter("btnNext");
               PrintWriter out = res.getWriter();
-              System.out.println(guessed+"===="+ rstart+"======"+nxt);
-              System.out.println(myQuizzSession.index);
 
               if (rstart != null) {
-                myQuizzSession.restart();
-                genQuizPage(myQuizzSession,out,seq[0],false,"9");
+                mySess.restart();
+                genQuizPage(mySess,out,seq[0],false,"9");
               }else if(nxt != null){
-                if(guessed != null && myQuizzSession.index != 4){
-                  boolean isItCor = myQuizzSession.isCorrect(Integer.parseInt(guessed));
-                  genQuizPage(myQuizzSession,out,seq[myQuizzSession.index],!isItCor,guessed);
+                if(guessed != null && mySess.index != 4){
+                  boolean isItCor = mySess.isCorrect(Integer.parseInt(guessed));
+                  genQuizPage(mySess,out,seq[mySess.index],!isItCor,guessed);
                 }else {
                   genQuizOverPage(out);
                 }
               }
-              System.out.println(myQuizzSession.index);
             }
-
-
 }
