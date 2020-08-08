@@ -52,3 +52,17 @@ public class SimpleRslt extends HttpServlet {
 
     }
 }
+@WebServlet("/test")
+public class MyQuizz extends HttpServlet{
+  void doPost(HttpServletRequest req, HttpServletResponse res)
+            throws ServletException, IOException {
+              String msg = req.getParameter("message");
+              int amnt = Integer.parseInt(req.getParameter("amount"));
+              PrintWriter out = response.getWriter();
+              out.print("<html><head><title>SimpleResult</title></head><body>");
+              for (int i = 0; i < amnt; i++) {
+                out.print("<p>"+ msg +"</p>");
+              }
+              out.print("</body></html>");
+            }
+}
