@@ -59,9 +59,8 @@ public class GuessServlet extends HttpServlet{
                 if(guessed != null && mySess.index != 4){
                   boolean isItCor = mySess.isCorrect(Integer.parseInt(guessed));
                   req.setAttribute("seq",seq[mySess.index]);
-                  //genQuizPage(mySess,out,seq[mySess.index],!isItCor,guessed);
+                  req.setAttribute("error",isItCor);
                 }else {
-                  //genQuizOverPage(out);
                   req.setAttribute("over","over");
                   System.out.println("over");
                 }

@@ -15,6 +15,11 @@
       <p>[<%= request.getAttribute("seq") %> <font style="color: red;"><b> ? </b></font>]
       </p>
       <p>Your answer:<input type="number" name="txtAnswer" /></p>
+      <%
+        if(request.getAttribute("error") !=null && !(boolean)request.getAttribute("error")){
+      %>
+      <p style='color:red'>Your last answer was not correct! Please try again</p>
+      <%} %>
       <p>
         <input type="submit" name="btnNext" value="Next" /><input
           type="submit"
