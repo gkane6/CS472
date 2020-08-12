@@ -1,7 +1,7 @@
 $(() => {
   console.log("ON load");
   $("#submit").click(fetchInfo);
-  $("btncmnt").click((e) => {
+  $(".btncmnt").click((e) => {
     console.log(e);
     console.log(e.target.value);
     fetchCom(e.target.value);

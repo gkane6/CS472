@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .info {
+        display: flex;
+        flex: 1 1;
+      }
+      h2 {
+        margin: 0 1em;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #adli {
+        border-top: 1px solid black;
+        border-right: 1px solid;
+      }
+      #dli {
+        border-top: 1px solid black;
+      }
+    </style>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript" src="./ressources/js/w4d3Quiz.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="selectContainer">
+        <select id="transp">
+          <option value="walk">Walking</option>
+          <option value="bike">Riding a Bike</option>
+          <option value="car">Driving a car</option>
+        </select>
+      </div>
+      <div class="info">
+        <div class="infoA">
+          <h2>Advantages</h2>
+          <div id="adli">
+            <ul id="adliul"></ul>
+          </div>
+        </div>
+        <div class="infoD">
+          <h2>Disadvantages</h2>
+          <div id="dli">
+            <ul id="dliul"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
