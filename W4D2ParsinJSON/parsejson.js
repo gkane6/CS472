@@ -1,7 +1,7 @@
 $(() => {
   console.log("ON load");
   $("#submit").click(fetchInfo);
-  $(".btncmnt").click((e) => {
+  $("btncmnt").click((e) => {
     console.log(e);
     console.log(e.target.value);
     fetchCom(e.target.value);
@@ -37,7 +37,7 @@ function showPost(data) {
   $("#post").html(
     data
       .map((el) => {
-        return `<div value="${el.id}">
+        return `<div class="btncmnt" value="${el.id}">
         <ul><li>${el.title}</li><li>${el.body}</li></ul>
         <button class="btncmnt" value="${el.id}" >Comments</button></div>`;
       })
