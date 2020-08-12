@@ -1,7 +1,7 @@
 $(() => {
   console.log("ON load");
   $("#submit").click(fetchInfo);
-  $(".btncmnt").click((e) => {
+  $("#post button").click((e) => {
     console.log(e);
     console.log(e.target.value);
     fetchCom(e.target.value);
@@ -39,7 +39,7 @@ function showPost(data) {
       .map((el) => {
         return `<div class="btncmnt" value="${el.id}">
         <ul><li>${el.title}</li><li>${el.body}</li></ul>
-        <button class="btncmnt" value="${el.id}" >Comments</button></div>`;
+        <button class="btncmnt" onclick="fetchCom(event)" value="${el.id}" >Comments</button></div>`;
       })
       .join("\n")
   );
@@ -47,9 +47,12 @@ function showPost(data) {
 
 function fetchCom(e) {
   console.log("fetchCom");
-  fetch(`https://jsonplaceholder.typicode.com/comments?postId=${e}`, {
-    method: "GET",
-  })
+  fetch(
+    `https://jsonplaceholder.typicode.com/comments?postId=${e.target.value}`,
+    {
+      method: "GET",
+    }
+  )
     .then((va) => {
       return va.json();
     })
